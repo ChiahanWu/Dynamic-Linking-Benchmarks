@@ -1,0 +1,1 @@
+/usr/bin/cc  -fPIC    -shared -Wl,-soname,libmodB.so -o libmodB.so CMakeFiles/modB.dir/modB.c.o 

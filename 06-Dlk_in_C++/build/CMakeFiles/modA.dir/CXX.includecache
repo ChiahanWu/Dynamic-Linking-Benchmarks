@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/chiahan/DLK-Benchmarks/06-Dlk_in_C++/modA.cpp
+pthread.h
+-
+iostream
+-
+modA.hpp
+/home/chiahan/DLK-Benchmarks/06-Dlk_in_C++/modA.hpp
+modB.hpp
+/home/chiahan/DLK-Benchmarks/06-Dlk_in_C++/modB.hpp
+
+/home/chiahan/DLK-Benchmarks/06-Dlk_in_C++/modA.hpp
+module.hpp
+/home/chiahan/DLK-Benchmarks/06-Dlk_in_C++/module.hpp
+
+/home/chiahan/DLK-Benchmarks/06-Dlk_in_C++/modB.hpp
+module.hpp
+/home/chiahan/DLK-Benchmarks/06-Dlk_in_C++/module.hpp
+
+/home/chiahan/DLK-Benchmarks/06-Dlk_in_C++/module.hpp
+
