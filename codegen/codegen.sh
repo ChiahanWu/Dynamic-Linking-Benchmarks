@@ -1,6 +1,6 @@
 #!/bin/bash
 
-arrsize=5
+arrsize=50
 
 
 create_addvec() {

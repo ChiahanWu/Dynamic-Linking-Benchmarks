@@ -1,6 +1,6 @@
 #include "vector.h"
 
-#define arrsize 5000
+#define arrsize 20000
 
 int main() {
     int x[arrsize] ,y[arrsize], z[arrsize];

@@ -42,7 +42,7 @@ test_static_linking_memsiz() {
 	do
 		gcc -o sout${i} main.c ./libvector.a
 		./sout${i} &
-		sleep 0.5
+		sleep 0.1
 		memsiz=`free | sed -n '2,2p' |awk '{print $3}'`
 		submem=$(($memsiz-$prememsiz))
 		prememsiz=$memsiz
@@ -69,7 +69,7 @@ test_loadtime_dlk_memsiz() {
 	do
 		gcc -o ldout${i} main.c ./libvector.so
 		./ldout${i} &
-		sleep 0.5
+		sleep 0.1
 		memsiz=`free | sed -n '2,2p' |awk '{print $3}'`
 		submem=$(($memsiz-$prememsiz))
 		prememsiz=$memsiz
@@ -93,7 +93,7 @@ test_runtime_dlk_memsiz() {
 	do
 		gcc -rdynamic -o rdout${i} main2.c -ldl
 		./rdout${i} &
-		sleep 0.5
+		sleep 0.1
 		memsiz=`free | sed -n '2,2p' |awk '{print $3}'`
 		submem=$(($memsiz-$prememsiz))
 		prememsiz=$memsiz

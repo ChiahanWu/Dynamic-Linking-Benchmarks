@@ -4,7 +4,7 @@
 #include <stdio.h>
 #include <dlfcn.h>
 
-#define arrsize 5
+#define arrsize 50
 
 int main() {
     void *handle;
@@ -45,7 +45,7 @@ int main() {
     }
 
     start_t = clock();
-    for (i = 0; i < 100000; i++) {
+    for (i = 0; i < 10000000; i++) {
         addvec(x, y, z);
         multvec(x, y, z);
     }

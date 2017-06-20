@@ -3,7 +3,7 @@
 #include <stdio.h>
 #include <dlfcn.h>
 
-#define arrsize 5000
+#define arrsize 20000
 
 int main() {
     void *handle;
