@@ -1,11 +1,10 @@
 #include "module.hpp"
 
-class nas : public module {
+class modA : public module {
  public:
 
     virtual void init();
-    void funcNas_A();
-    void funcNas_B();
-
+    void funcModA();
 };
-nas* create_n();
+
+modA* create_modA_instance();

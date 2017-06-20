@@ -1,1 +1,0 @@
-/usr/bin/c++  -fPIC    -shared -Wl,-soname,libmodA.so -o libmodA.so CMakeFiles/modA.dir/modA.cpp.o -lpthread 

@@ -1,11 +1,10 @@
 #include "module.hpp"
 
-
-class s1ap : public module {
+class modB : public module {
  public:
 
     virtual void init();
-    void funcS1ap_A();
-    void funcS1ap_B();
+    void funcModB();
 };
-s1ap* create_s() ;
+
+modB* create_modB_instance();

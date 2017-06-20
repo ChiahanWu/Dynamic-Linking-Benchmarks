@@ -14,20 +14,18 @@ project (DLK_in_C++)
 add_library(modA MODULE
   	../modA.cpp
 )
-target_link_libraries (modA pthread)
 
 add_library(modB MODULE
   	../modB.cpp
 )
-target_link_libraries (modB pthread)
 
 #################################
 # add executables for operation
 #################################
 
-add_executable(main
+add_executable(exec
   	../main.cpp
-  )
+)
 
-target_link_libraries(main ${CMAKE_DL_LIBS})
+target_link_libraries(exec ${CMAKE_DL_LIBS})
 

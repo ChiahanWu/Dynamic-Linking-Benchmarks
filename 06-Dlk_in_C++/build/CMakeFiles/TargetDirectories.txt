@@ -1,3 +1,0 @@
-/home/chiahan/DLK-Benchmarks/06-Dlk_in_C++/build/CMakeFiles/main.dir
-/home/chiahan/DLK-Benchmarks/06-Dlk_in_C++/build/CMakeFiles/modA.dir
-/home/chiahan/DLK-Benchmarks/06-Dlk_in_C++/build/CMakeFiles/modB.dir
