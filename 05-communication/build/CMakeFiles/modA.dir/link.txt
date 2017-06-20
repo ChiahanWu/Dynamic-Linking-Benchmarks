@@ -1,1 +1,0 @@
-/usr/bin/cc  -fPIC    -shared -Wl,-soname,libmodA.so -o libmodA.so CMakeFiles/modA.dir/modA.c.o 

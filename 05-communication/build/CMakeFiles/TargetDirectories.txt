@@ -1,3 +1,0 @@
-/home/chiahan/DLK-Benchmarks/05-communication/build/CMakeFiles/main.dir
-/home/chiahan/DLK-Benchmarks/05-communication/build/CMakeFiles/modA.dir
-/home/chiahan/DLK-Benchmarks/05-communication/build/CMakeFiles/modB.dir
