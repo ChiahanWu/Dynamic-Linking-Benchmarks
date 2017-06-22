@@ -55,10 +55,18 @@ test_loadtime_dlk_codesiz() {
 	echo "loadtime dynamic linking: "
 	for i in $(seq 1 $maxfile)
 	do
-		gcc -o ldout${i} main.c ./libvector.so
-		filesiz=`ls -l ldout${i} | awk '{print $5}'`
-		sumsiz=$(($sumsiz + $filesiz))
-		echo -n "$sumsiz \t"
+		if [ "${i}" -eq "1" ]; then
+			gcc -o ldout${i} main.c ./libvector.so
+			filesiz=`ls -l ldout${i} | awk '{print $5}'`
+			libsiz=`ls -l libvector.so | awk '{print $5}'`
+			sumsiz=$(($sumsiz + $filesiz + $libsiz))
+			echo -n "$sumsiz \t"
+		else
+			gcc -o ldout${i} main.c ./libvector.so
+			filesiz=`ls -l ldout${i} | awk '{print $5}'`
+			sumsiz=$(($sumsiz + $filesiz))
+			echo -n "$sumsiz \t"
+		fi
 	done
 	echo "\n"
 }
@@ -69,10 +77,18 @@ test_runtime_dlk_codesiz() {
 	echo "runtime dynamic linking: "
 	for i in $(seq 1 $maxfile)
 	do
-		gcc -rdynamic -o rdout${i} main2.c -ldl
-		filesiz=`ls -l rdout${i} | awk '{print $5}'`
-		sumsiz=$(($sumsiz + $filesiz))
-		echo -n "$sumsiz \t"
+		if [ "${i}" -eq "1" ]; then
+			gcc -rdynamic -o rdout${i} main2.c -ldl
+			filesiz=`ls -l rdout${i} | awk '{print $5}'`
+			libsiz=`ls -l libvector.so | awk '{print $5}'`
+			sumsiz=$(($sumsiz + $filesiz + $libsiz))
+			echo -n "$sumsiz \t"
+		else
+			gcc -rdynamic -o rdout${i} main2.c -ldl
+			filesiz=`ls -l rdout${i} | awk '{print $5}'`
+			sumsiz=$(($sumsiz + $filesiz))
+			echo -n "$sumsiz \t"
+		fi
 	done
 	echo "\n"
 }
